@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>IBM Test</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/mdb/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+  <link href="/mdb/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="mdb/css/style.css" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" src="/mbd/css/datatables.min.css"/>
+      
+      <script type="text/javascript" src="/mdb/js/jquery.min.js"></script>
+
+       <!-- MDB core JavaScript -->
+      
+      <!-- Bootstrap tooltips -->
+ <!-- Bootstrap core JavaScript --> 
+      <script type="text/javascript" src="/mdb/js/bootstrap.min.js"></script>
+
+     
+       <script type="text/javascript" href="/mbd/js/datatables.min.js"></script>
+            
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.css"/>
+ 
+            <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+
+
+     
+    
+</head>
+
+<body>
+    <br><br>
+    <h1>List of links</h1>
+    
+      <div class="container">
+     
+        <table id="dtBasicExample" class="table table-striped table-bordered table-sm table-fixed" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="black white-text">Link
+              </th>
+              <th class="black white-text">Origin
+              </th>
+              
+            </tr>
+          </thead>
+          <tbody>
+
+
+
+
+            <% for(var i=0; i<links.length; i++) {%>
+            <!--
+                <li class="list-group-item">
+
+                
+                <span>Link: </span><%= links[i].links %>
+                <br/>
+                <span>Origin: </span><%= links[i].origin %>
+
+            </li>
+            -->
+            <tr>
+              <td><a href="<%= links[i].links %>"><%= links[i].links %></a></td>
+              <td><a href="<%= links[i].origin %>"><%= links[i].origin %></a></td>
+            </tr>
+        <% } %>
+        </tbody>
+        <tfoot>
+            <tr>
+              <th class="black white-text">Link
+              </th>
+              <th class="black white-text">Origin
+              </th>
+              
+            </tr>
+        </tfoot>
+        </table>
+        <br><br>
+        <a href="index.html">Back to home</a>
+     </div>
+    
+    <!-- SCRIPTS -->
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+        $('#dtBasicExample').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+        });
+
+
+    </script>
+
+    
+
+            
+
+            
+ 
+            
+</body>
+</body>
+  
+
+</html>
+
+ 
+
+
+<style type="text/css">
+    
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+
+body {
+  text-align: center;
+}
+    input[type=text] {
+  width: 220px;
+}
+    
+</style>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>IBM Test</title>
+  </head>
+<body text-align: center;>
+<br><br>
+<h1>IBM Developer Test</h1>
+
+
+<form id="form1" name="form1" action="/URL" method="post"  onsubmit="return validateForm()">
+    <label for="inputURL">Insert an Url</label><br>
+    <input type="text" id="inputURL" name="inputURL" placeholder="https://www.ibm.com/" required>
+    <button type="submit" id="button1" name="button1">Go</button>
+</form>
+<br>
+
+
+</body>
+</html>
+
+
+<script>
+
+
+  function search(x) {
+    // body...
+    console.log("Entrou search e o valor eh ", x);
+    alert("console");
+    
+  //alert("moved");
+    window.location.replace("viewPage.html");
+    
+
+  }
+  function validateForm() {
+  var x = document.forms["form1"]["inputURL"].value;
+  console.log("teste" , isValidURL(x)); // return true
+  if (!isValidURL(x)) {
+    alert("Invalid URL, please check it!");
+    return false;
+  }
+  //search(x);
+}
+function isValidURL(string) {
+  var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+  return (res !== null)
+};
+
+</script>
+
+<style>
+    body {
+  text-align: center;
+}
+    input[type=text] {
+  width: 220px;
+}
+</style>

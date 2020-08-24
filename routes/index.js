@@ -112,8 +112,8 @@ router.post('/URL', function (req, res) {
 })
 function createTable(conn){
 const sql = "CREATE TABLE IF NOT EXISTS links ("+
-                  "links varchar(100) NOT NULL,"+
-                  "origin varchar(100),"+
+                  "links varchar(200) NOT NULL,"+
+                  "origin varchar(200),"+
                   "PRIMARY KEY (links, origin)"+
                   ");";
       
